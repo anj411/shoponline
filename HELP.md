@@ -1,23 +1,19 @@
-# Getting Started
+SPRING-BOOT-THYMELEAF-SHOPONLINE-DEMO
 
-### Reference Documentation
-For further reference, please consider the following sections:
+Technologies Used : 
+#JAVA
+#SPRING BOOT
+#MYSQL
+#THYMELEAF
+#JAVASCRIPT
+#HTML
+#CSS
+#BOOTSTRAP
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#using.devtools)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#data.sql.jpa-and-spring-data)
-* [Thymeleaf](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#web.servlet.spring-mvc.template-engines)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#web)
+Since the world is moving fast and everything is available on fingertips, we have also tried to make an E-Commerce website called SHOP-ONLINE. Here users can register themselves and can order products after a successful payment. The website also has an admin panel from where the CATEGORIES, MENUS and PRODUCTS can be managed, with a user friendly interface. The admin can manage categories, can add or remove categories as per the stock, can add or remove products. Admin can also manage the stock of the products from the Panel. There are different categories and menus so that the users can navigate easily.
 
-### Guides
-The following guides illustrate how to use some features concretely:
+When you make something where users can come in and register and something where payment is included, security is very Important. We have tried our best to ensure the security of the users and smooth payment experience.The Layers have been designed in a way that the user data is not exposed and could not fall prey to attackers and hackers.
 
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+ScreenShot AdminPanel:
 
+<img width="1440" alt="Screenshot 2022-12-13 at 3 22 14 PM" src="https://user-images.githubusercontent.com/102300250/207285583-0036683a-209b-41ef-8106-23c4ad7247a0.png">
