@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card col-3 m-3">
+				<div>
+					<h3 class = "regDetails">Register Here!!</h3>
+				</div>
+				<div th:if="${session.message}"
+					th:classappend="${session.message.type}" class="alert">
+					<p th:text="${session.message.content}"></p>
+					<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+				</div>
+				<form class="row g-3 register" action="" th:action="@{/registerNewUser}"
+					method="post" th:object="${user}">
+					<div>
+						<label for="userFirstName" class="form-label">First Name</label> <input
+							name="userFirstName" type="text" class="form-control" id="userFirstName"
+							aria-describedby="emailHelp" placeholder="Enter your First Name"
+							required th:value="${user.userFirstName}">
+					</div>
+					<div>
+						<label for="userLastName" class="form-label">Last Name</label> <input
+							name="userLastName" type="text" class="form-control" id="userLastName"
+							aria-describedby="emailHelp" placeholder="Enter your Last Name"
+							required th:value="${user.userLastName}">
+					</div>
+					<div>
+						<label for="userEmail" class="form-label">Email address</label> <input
+							name="userEmail" type="email" class="form-control" id="userEmail"
+							aria-describedby="emailHelp" placeholder="Enter your email"
+							required th:value="${user.userEmail}">
+					</div>
+					<div>
+						<label for="userPassword" class="form-label">Password</label> <input
+							name="userPassword" type="password" class="form-control"
+							id="userPassword" required>						
+					</div>
+					<div class = "mt-4">
+							<input name="agreement" type="checkbox" class="form-check-input"
+								id="agreement"> <label class="form-check-label"
+								for="agreement">Terms and Conditions</label>
+					</div>
+
+						<button type="submit">Submit</button>
+
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<section>
+	<div class = "proddetail">Product Details</div>
+	<div class = "priceitem" id= "itemprice">
+    	 <div class="cartproduct">
+     	</div>
+	</div>
+
+	<div class = "proddetail">Address Details</div>
+	<div class = "addressdetail">  
+		<table class = 'table'>
+			<thead class = 'thead-light'>
+				<tr>
+					<th>Name</th>
+					<th>Mobile Number</th>
+					<th>Pin Code</th>
+					<th>Address</th>
+					<th>City</th>
+					<th>State</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="shippingAddress : ${shipAddress}">
+					<td th:text = "@{${shippingAddress.name}}"></td>
+					<td th:text = "@{${shippingAddress.mobileNumber}}"></td>
+					<td th:text = "@{${shippingAddress.pinCode}}"></td>
+					<td th:text = "@{${shippingAddress.address}}"></td>
+					<td th:text = "@{${shippingAddress.city}}"></td>
+					<td th:text = "@{${shippingAddress.state}}"></td>
+					
+				</tr>
+			</tbody>
+		</table>      	
+	</div>
+	
+	<button id = "confirm" type = "button" class = 'paybutton float-end text-white' onclick = "confirmOrder()">Confirm Order</button>
+	
+<script th:src="@{/js/script.js}"></script>
+</section>
+</body>
+</html>
