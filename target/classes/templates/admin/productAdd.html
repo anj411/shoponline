@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="admin/adminBase::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+	rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<div class ="container">
+			<div class="card col-4 m-5">
+				<h3 class = "regDetails">Add a new Product</h3>
+				
+				<form class="row g-3 col-14" th:action="@{/admin/products/add}" method="post" th:object="${productDTO}"
+					enctype="multipart/form-data"style="padding: 25px;">
+					
+					<div class="row">
+						<input type="hidden" name="id" th:field="*{id}">
+					</div>
+					<div class="col-md-6">
+						<label for="productName">Name</label> <input type="text"
+							class="form-control" required th:field="*{name}"
+							name="productName" id="productName"
+							placeholder="Enter Product name">
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="category">Select Category</label> <select
+								class="form-control" th:field="*{categoryId}" id="category"
+								name="category">
+								<option th:each="category :${categories}"
+									th:value="${category.id}" th:text="${category.name}">
+							</select>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="price">Price</label> <input type="number"
+								class="form-control" required th:field="*{price}" name="price"
+								id="price" placeholder="Price">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="stock">Stock</label> <input type="number"
+								class="form-control" required th:field="*{stock}" name="stock"
+								id="stock" placeholder="Stock">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="size">Size</label> <input type="text"
+								class="form-control" required th:field="*{size}" name="size"
+								id="size" placeholder="Size">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="color">Color</label> <input type="text"
+								class="form-control" required th:field="*{color}" name="color"
+								id="color" placeholder="Color">
+						</div>
+					</div>
+
+					<div class="col-10">
+						<div class="form-group">
+							<label for="description">Product Description</label>
+							<textarea class="form-control" rows="3" th:field="*{description}"
+								name="description" id="description"></textarea>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="col-sm-5">
+							<p>Product Image</p>
+						</div>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" name="productImage"
+								accept="image/jpeg, image/png" id="productImage" /> <label
+								class="custom-file-label" for="productImage"></label>
+						</div>
+						<div class="form-group">
+							<img src="#" id="imgPreview" height="100px" width="100px"
+								th:src="@{${'/productImages/' + productDTO.imageName}}"
+								style="margin-top: 20px" alt=" ">
+						</div>
+						<input type="hidden" name="imgName"
+							th:value="${productDTO.imageName}">
+					</div>
+					<div class = "w-75 m-auto">
+						<button type="submit" >Add Product</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

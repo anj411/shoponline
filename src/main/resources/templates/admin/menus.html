@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="admin/adminBase::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+		<div class="container-fluid m-5">
+			<table class="table table-striped table-bordered">
+				<thead class="table-dark">
+					<tr>
+						<th scope="col">SN</th>
+						<th scope="col">Menu Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="menu, iStat : ${menus}">
+						<th scope="row" th:text="${iStat.index + 1}">1</th>
+						<td th:text="${menu.menuName}">Larry</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+</body>
+</html>
