@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="admin/adminBase::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container" style="min-height: 0px">
+			<div class="row" style="padding-top: 50px;">
+				<div class="w-75 card"
+					style="min-height: 0px">
+					<h3 class="regDetails">Add Category</h3>
+					<div class="card-body">
+						<form th:action="@{/admin/categories/add}" method="post"
+							th:object="${categoryDTO}"
+							enctype="multipart/form-data">
+							<input type="hidden" name="id" th:field="*{id}">
+							<div class="form-group">
+								<label for="name">Name</label> <input type="text"
+									class="form-control" required th:field="*{name}" name="name"
+									id="name" placeholder="Enter name"
+									style="border-top-width: 1px; margin-top: 5px;">
+							</div>
+							<div class="form-group">
+								<label for="menu" style="margin-top: 9px;">Select Menu</label> <select
+									class="form-control" th:field="*{menuId}" id="menu" name="menu"
+									style="margin-top: 10px;">
+									<option th:each="menu :${menus}" th:value="${menu.menuId}"
+										th:text="${menu.menuName}">
+								</select>
+							</div>
+							<div class="col-12">
+								<div class="col-sm-8 mt-2">
+									<p>Category Image</p>
+								</div>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input"
+										name="categoryImage" accept="image/jpeg, image/png"
+										id="categoryImage" /> <label class="custom-file-label"
+										for="categoryImage"></label>
+								</div>
+								<div class="form-group">
+									<img src="#" id="imgPreview" height="100px" width="100px"
+										th:src="@{${'/categoryImages/' + categoryDTO.imageName}}" alt=" ">
+								</div>
+								<input type="hidden" name="imgName"
+									th:value="${categoryDTO.imageName}">
+							</div>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class = "shop">SHOP BY CATEGORY</div>
+		<table> 
+ 			<tr>
+				<td th:each = "category: ${categories}">
+					<div class = "shirt"><a href = "#" th:href = "@{'/category/' + ${category.id}}">
+						<div><img class="p-2" alt="" th:src = "@{${'/categoryImages/' + category.imageName}}"  src="/img/shirt.jpg" width = "350" height = "350"></div>
+					 	<div class = "text-lg-center" th:text = "@{${category.name}}"></div></a>
+					 </div>
+				</td> 
+			</tr>			
+ 		</table> 
+	</section>
+</body>
+</html>

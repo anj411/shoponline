@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<section>
+		<div class="priceitem" id="itemprice">
+			<div class="cartproduct"></div>
+
+		</div>
+		<div>
+		    <div class = "float-end"> 
+			<a id = "place" th:href="@{/placeorder}" class='placeorder btn btn-success btns-sm'>Place
+				Order</a>
+		</div>
+		<script th:src="@{/js/script.js}"></script>
+	</section>
+</body>
+</html>

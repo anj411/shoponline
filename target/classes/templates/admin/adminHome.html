@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="admin/adminBase::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="bg-image"
+			style="background-image: url('../../static/img/mybg.jpeg'); height: 400px;">
+			<div class="jumbotron text-center" style="padding-top: 50px;">
+
+				<h1 class="display-4">Welcome back, Admin</h1>
+				<p>
+					Easily manage your data from this admin
+					<mark>CMS</mark>
+				</p>
+			</div>
+			<div class="container-fluid" style="padding-left: 300px;">
+				<div class="row">
+					<div class="col-sm-3 pt-3">
+						<div class="card" style="background-color: white;">
+							<div class="card-body">
+								<h4 class="card-title">Menus</h4>
+								<p class="card-text">Manage the menus section here.</p>
+								<a href="#" th:href="@{/admin/menus}"
+									class="card-link btn btn-primary">Manage</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 pt-3">
+						<div class="card" style="background-color: white;">
+							<div class="card-body">
+								<h4 class="card-title">Categories</h4>
+								<p class="card-text">Manage the categories section here.</p>
+								<a href="#" th:href="@{/admin/categories}"
+									class="card-link btn btn-primary">Manage</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 pt-3 ">
+						<div class="card" style="background-color: white;">
+							<div class="card-body">
+								<h4 class="card-title">Products</h4>
+								<p class="card-text">Manage products from all categories
+									here.</p>
+								<a href="#" th:href="@{/admin/products}"
+									class="card-link btn btn-primary">Manage</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
