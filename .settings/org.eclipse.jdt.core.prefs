@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 org.eclipse.jdt.core.builder.annotationPath.allLocations=disabled
 org.eclipse.jdt.core.compiler.annotation.inheritNullAnnotations=disabled
 org.eclipse.jdt.core.compiler.annotation.missingNonNullByDefaultAnnotation=ignore
@@ -8,10 +9,15 @@ org.eclipse.jdt.core.compiler.annotation.nonnullbydefault=org.eclipse.jdt.annota
 org.eclipse.jdt.core.compiler.annotation.nonnullbydefault.secondary=
 org.eclipse.jdt.core.compiler.annotation.nullable=org.springframework.lang.Nullable
 org.eclipse.jdt.core.compiler.annotation.nullable.secondary=
+=======
+org.eclipse.jdt.core.compiler.annotation.nonnull=org.springframework.lang.NonNull
+org.eclipse.jdt.core.compiler.annotation.nullable=org.springframework.lang.Nullable
+>>>>>>> 4cc8ada8a7e7b7289d251054b54c754710d69c89
 org.eclipse.jdt.core.compiler.annotation.nullanalysis=enabled
 org.eclipse.jdt.core.compiler.codegen.methodParameters=generate
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.compliance=1.8
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.problem.APILeak=warning
 org.eclipse.jdt.core.compiler.problem.annotatedTypeArgumentToUnannotated=info
 org.eclipse.jdt.core.compiler.problem.annotationSuperInterface=warning
@@ -107,6 +113,15 @@ org.eclipse.jdt.core.compiler.problem.unusedPrivateMember=warning
 org.eclipse.jdt.core.compiler.problem.unusedTypeParameter=ignore
 org.eclipse.jdt.core.compiler.problem.unusedWarningToken=warning
 org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
+=======
+org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled
+org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
+org.eclipse.jdt.core.compiler.problem.nullAnnotationInferenceConflict=warning
+org.eclipse.jdt.core.compiler.problem.nullReference=warning
+org.eclipse.jdt.core.compiler.problem.nullSpecViolation=warning
+org.eclipse.jdt.core.compiler.problem.potentialNullReference=warning
+org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=ignore
+>>>>>>> 4cc8ada8a7e7b7289d251054b54c754710d69c89
 org.eclipse.jdt.core.compiler.processAnnotations=disabled
 org.eclipse.jdt.core.compiler.release=disabled
 org.eclipse.jdt.core.compiler.source=1.8
